@@ -9,9 +9,10 @@ sidebar_position: 4
 ```
 sudo apt update
 sudo apt install -y libopenblas-dev \
-python3-dev \
-python3-venv \
-libcjson-dev libasound2-dev
+		python3-dev \
+		python3-venv \
+		libcjson-dev \
+		libasound2-dev
 ```
 
 **（2）创建python虚拟环境**
