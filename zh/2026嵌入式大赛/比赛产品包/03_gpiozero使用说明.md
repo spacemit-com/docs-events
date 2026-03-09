@@ -11,7 +11,7 @@ sudo apt update
 sudo apt install -y libopenblas-dev \
 python3-dev \
 python3-venv \
-libcjson-dev libasound2-dev
+libcjson-dev libasound2-dev python3-gpiozero
 ```
 
 **（2）创建python虚拟环境**
@@ -19,7 +19,7 @@ libcjson-dev libasound2-dev
 设置spacemit python pip源：
 
 ```
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip config set global.extra-index-url https://git.spacemit.com/api/v4/projects/33/packages/pypi/simple
 ```
 
@@ -58,7 +58,6 @@ Muse Pi Pro开发板引脚图如下所示：
 也可以在终端输入以下命令便捷查看：
 
 ```
-sudo chmod 666 /dev/gpiochip0
 source ~/gpioenv/bin/activate
 pinout
 ```
@@ -166,6 +165,8 @@ pause()
 ```
 
 通过IDE或者终端执行上述python脚本， 您应该可以看到LED灯逐渐由亮变暗然后由暗变亮。
+
+注意gpiozero输出的pwm为软件模拟pwm，在驱动舵机时会出现抖动的现象，如果需要获得与单片机一样的稳定效果，应该使用硬件pwm，硬件pwm的使用方法参考 **驱动demo章节**
 
 ## 3.3 读取按钮状态
 
