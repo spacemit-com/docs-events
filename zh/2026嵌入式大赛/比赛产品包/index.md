@@ -2,12 +2,12 @@ sidebar_position: 1
 
 # 比赛产品包
 
-- [1. K1 MUSE Pi Pro 教学资料](01_Muse_Pi_Pro教学资料.md)
+- [1. K1 MUSE Pi Pro教学资料](01_Muse_Pi_Pro教学资料.md)
 - [2. ROS2使用说明](02_ROS2使用说明.md)
-- [3. gpiozero 使用说明](03_gpiozero使用说明.md)
+- [3. gpiozero使用说明](03_gpiozero使用说明.md)
 - [4. 外设模块参考说明](04_外设模块参考说明.md)
 - [5. Demo Zoo](05_Demo_Zoo.md)
-- [6. AI 基础模块参考说明](06_AI基础模块参考说明.md)
+- [6. AI基础模块参考说明](06_AI基础模块参考说明.md)
 - [7. 综合应用案例目录](07_综合应用案例目录.md)
 - [8. 案例1—AI聊天机器人](08_案例1—AI聊天机器人.md)
 - [9. 案例2—人脸识别应用](09_案例2—人脸识别应用.md)
