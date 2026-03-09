@@ -27,9 +27,9 @@ sidebar_position: 1
 
 [https://gitee.com/chen_zhao_qi/learn-riscv-01.git](https://gitee.com/chen_zhao_qi/learn-riscv-01.git)
 
-## Spacemit RISC-V 入门
+## Spacemit RISC-V入门
 
-### Spacemit RISC-V 简介
+### Spacemit RISC-V简介
 
 [视频教程](https://www.bilibili.com/video/BV1Dh5Lz7EQD?buvid=YC4F7CC82F8DD56B4FD6AC6F6FF7187C0A99&from_spmid=search.search-result.0.0&is_story_h5=false&mid=rnn1kaOkAxuNW2GQpPH%2BIw%3D%3D&plat_id=116&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=B8E3DF94-1B59-4760-9141-DC092B2F8A58&share_source=COPY&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1747018853&unique_k=f7XIcVl&up_id=3537125114906665)
 
@@ -37,16 +37,21 @@ sidebar_position: 1
 
 - RISC-V简介
 - Spacemit RISC-V 技术栈和生态简介
+
+### RISC-V架构基础及快速入门
+
+参考文档：
+
 - [RISC-V 架构基础及快速入门](https://www.spacemit.com/community/document/info?lang=zh&nodepath=courses/RISC-V/01_RISC-V%E6%9E%B6%E6%9E%84%E5%9F%BA%E7%A1%80%E5%8F%8A%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
 
-### MUSE Pi Pro 系统准备与刷机教程
+### MUSE Pi Pro系统准备与刷机教程
 
 [视频教程](https://www.bilibili.com/video/BV1Dh5Lz7EQD?buvid=YC4F7CC82F8DD56B4FD6AC6F6FF7187C0A99&from_spmid=search.search-result.0.0&is_story_h5=false&mid=rnn1kaOkAxuNW2GQpPH%2BIw%3D%3D&plat_id=116&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=B8E3DF94-1B59-4760-9141-DC092B2F8A58&share_source=COPY&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1747018853&unique_k=f7XIcVl&up_id=3537125114906665&p=2&spm_id_from=333.788.videopod.sections)
 
 教程内容
 
-- MUSE Pi Pro 简介
-- 镜像bianbu-computer下载、Titan工具安装
+- MUSE Pi Pro简介
+- 镜像Bianbu LXQt下载、Titan工具安装
 - 使用Titan工具刷机
 - 初始化系统设置
 
@@ -54,7 +59,7 @@ sidebar_position: 1
 
 [视频教程](https://www.bilibili.com/video/BV1Dh5Lz7EQD?buvid=YC4F7CC82F8DD56B4FD6AC6F6FF7187C0A99&from_spmid=search.search-result.0.0&is_story_h5=false&mid=rnn1kaOkAxuNW2GQpPH%2BIw%3D%3D&plat_id=116&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=B8E3DF94-1B59-4760-9141-DC092B2F8A58&share_source=COPY&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1747018853&unique_k=f7XIcVl&up_id=3537125114906665&spm_id_from=333.788.videopod.sections&p=3)
 
-## bianbu 的基础使用
+## Bianbu LXQt系统基础使用
 
 ### 串口调试
 
@@ -88,6 +93,13 @@ sidebar_position: 1
 - Git基础操作教程
 - 代码管理实践
 
+## 内核编译与配置
+
+参考文档：
+
+- [Buildroot SDK 简介](https://www.spacemit.com/community/document/info?lang=zh&nodepath=software/SDK/buildroot/k1_buildroot/intro.md)
+- [Linux 内核编译与配置](https://www.spacemit.com/community/document/info?lang=zh&nodepath=software/SDK/buildroot/k1_buildroot/source.md)
+
 ## 代码开发环境配置
 
 ### vscodium简介与安装
@@ -111,15 +123,11 @@ sidebar_position: 1
 - 使用 pip、设置 Spacemit Pip 源
 - 如何查看已提供whl包支持 python 包
 
-
-
 ### 相机调用示例
 
 [视频教程](https://www.bilibili.com/video/BV1Dh5Lz7EQD?buvid=YC4F7CC82F8DD56B4FD6AC6F6FF7187C0A99&from_spmid=search.search-result.0.0&is_story_h5=false&mid=rnn1kaOkAxuNW2GQpPH%2BIw%3D%3D&plat_id=116&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=B8E3DF94-1B59-4760-9141-DC092B2F8A58&share_source=COPY&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1747018853&unique_k=f7XIcVl&up_id=3537125114906665&spm_id_from=333.788.videopod.sections&p=10)
 
-
-
-### 使用 notebook 
+### 使用 notebook
 
 [视频教程](https://www.bilibili.com/video/BV1Dh5Lz7EQD?buvid=YC4F7CC82F8DD56B4FD6AC6F6FF7187C0A99&from_spmid=search.search-result.0.0&is_story_h5=false&mid=rnn1kaOkAxuNW2GQpPH%2BIw%3D%3D&plat_id=116&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=B8E3DF94-1B59-4760-9141-DC092B2F8A58&share_source=COPY&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1747018853&unique_k=f7XIcVl&up_id=3537125114906665&spm_id_from=333.788.videopod.sections&p=11)
 
@@ -129,8 +137,6 @@ sidebar_position: 1
 - 虚拟环境如何使用 jupyter lab
 
 - vscodium 如何使用 notebook
-
-
 
 ### Python 使用案例
 
@@ -144,8 +150,6 @@ sidebar_position: 1
 - scipy 使用
 - scikit-learn 使用
 
-
-
 ## C++代码开发方法
 
 [视频教程](https://www.bilibili.com/video/BV1Dh5Lz7EQD?buvid=YC4F7CC82F8DD56B4FD6AC6F6FF7187C0A99&from_spmid=search.search-result.0.0&is_story_h5=false&mid=rnn1kaOkAxuNW2GQpPH%2BIw%3D%3D&plat_id=116&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=B8E3DF94-1B59-4760-9141-DC092B2F8A58&share_source=COPY&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1747018853&unique_k=f7XIcVl&up_id=3537125114906665&spm_id_from=333.788.videopod.sections&p=13)
@@ -158,14 +162,12 @@ sidebar_position: 1
 - 编译
 - 运行OpenCV相机应用
 
-
-
 # 实战案例库
 
-- [外设硬件调试](https://active.spacemit.com/doc/RISC-V比赛/03_蓝桥杯比赛产品包/05_外设模块参考说明)
-- [AI基础模块参考说明](https://active.spacemit.com/doc/RISC-V比赛/03_蓝桥杯比赛产品包/07_AI基础模块参考说明)
-- [AI综合应用案例](https://active.spacemit.com/doc/RISC-V比赛/03_蓝桥杯比赛产品包/08_AI综合应用案例目录)
-- [案例课程](https://www.spacemit.com/community/course)
+- [外设硬件调试](./04_外设模块参考说明.md)
+- [AI基础模块参考说明](./06_AI基础模块参考说明.md)
+- [AI综合应用案例](./07_AI综合应用案例目录.md)
+- [应用案例课程](https://www.spacemit.com/community/course)
 
 # 参考资料
 
