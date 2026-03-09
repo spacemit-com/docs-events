@@ -1,4 +1,4 @@
-sidebar_position: 2
+sidebar_position: 3
 
 # 蓝桥杯比赛
 
