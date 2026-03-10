@@ -5,7 +5,7 @@ sidebar_position: 12
 
 ## 硬件连接
 
-![硬件连接](/home/anny/workspaces/spacemit_markdown/brdk-doc/zh/06_Robot_development/6.4_Robot_Application_Module/6.4.5_Control_Protocol/images/ethercat_motor.jpg)
+![硬件连接](images/ethercat_motor.jpg)
 如图所示，接入电机电源，网线一端连接电机IN口，另一端插入开发板网口，
 电源指示灯常亮表示电机正常工作
 
