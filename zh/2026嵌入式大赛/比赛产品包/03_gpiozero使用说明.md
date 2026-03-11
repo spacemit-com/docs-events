@@ -1,4 +1,6 @@
+---
 sidebar_position: 3
+---
 
 > 本文列出已在Muse Pi Pro上调试过的GPIO模块及使用说明，可供开发者参考。
 

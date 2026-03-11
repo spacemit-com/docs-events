@@ -1,4 +1,6 @@
+---
 sidebar_position: 1
+---
 
 # 2026嵌入式大赛
 
