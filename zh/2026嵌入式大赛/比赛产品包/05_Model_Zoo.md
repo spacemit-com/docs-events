@@ -13,7 +13,7 @@ SpacemiT Model Zoo 是面向进迭时空 K 系列芯片适配的 AI 应用集合
 - **自然语言（LLM）**：OpenAI 兼容接口对接（如 `llama-server`），提供 `llm_chat` 等示例便于快速体验与集成
 - **端到端应用示例**：`omni_agent`（VAD -> ASR -> LLM -> TTS，可选 MCP 工具调用），可一键构建后直接跑通
 
-![](/home/anny/workspaces/spacemit_markdown/docs-bianbu/zh/static/model-zoo-arch.png)
+![](images/model-zoo-arch.png)
 
 
 **Model Zoo 关键目录速览：**
