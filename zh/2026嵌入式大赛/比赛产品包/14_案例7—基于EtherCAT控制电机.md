@@ -27,17 +27,17 @@ ls -la /usr/lib/linux-image-6.6.63/spacemit/
 
 # 更新bootfs分区的DTB文件（关键步骤！）
 # 确保目录存在
-mkdir -p /boot/spacemit/6.6.63
+sudo mkdir -p /boot/spacemit/6.6.63
 
 # 复制DTB文件
-cp /usr/lib/linux-image-6.6.63/spacemit/k1-x_MUSE-Pi-Pro.dtb \
+sudo cp /usr/lib/linux-image-6.6.63/spacemit/k1-x_MUSE-Pi-Pro.dtb \
    /boot/spacemit/6.6.63/k1-x_MUSE-Pi-Pro.dtb
 
 # 确保修改已同步到磁盘
-sync
+sudo sync
 
 # 重启系统
-reboot
+sudo reboot
 ```
 
 > [!CAUTION]
@@ -131,24 +131,7 @@ fi
 sudo apt update
 ```
 
-## 安装编译环境
-
-```bash
-sudo apt install -y \
-    build-essential \
-    cmake \
-    git \
-    python3-colcon-common-extensions \
-    python3-rosdep \
-    python3-vcstool \
-    libyaml-cpp-dev \
-    libfmt-dev \
-    python3-pip
-```
-
 ## 安装ROS2开发工具
-
-如果您要构建ROS包或以其他方式进行开发，您还可以安装开发工具（推荐）：
 
 ```shell
 sudo apt install ros-dev-tools
@@ -188,14 +171,9 @@ sudo apt install -y \
     ros-humble-joint-trajectory-controller \
     ros-humble-joint-state-publisher \
     ros-humble-joint-state-publisher-gui
-
-# 使用rosdep安装深层依赖
-export ROS_DISTRO=humble
-sudo rosdep init
-rosdep update
 ```
 
-# 编译代码
+# 下载代码
 
 ## 创建工作区
 
@@ -208,64 +186,12 @@ cd ~/ros2_ws/src
 
 ```bash
 # 下载ethercat控制包
-git@github.com:wangannyi/jobot_protocol_bringup.git
+git clone https://github.com/wangannyi/jobot_protocol_bringup.git
 
 # 下载ethercat_driver依赖
 git clone https://github.com/ICube-Robotics/ethercat_driver_ros2.git
 cd ethercat_driver_ros2
 git checkout humble  # 切换到Humble分支（重要！）
-```
-
-## 安装编译依赖
-
-```bash
-cd ~/ros2_ws
-
-# 使用rosdep安装所有依赖
-export ROS_DISTRO=humble
-rosdep install --from-paths src --ignore-src -r -y
-
-# 额外依赖（某些情况下rosdep可能遗漏）
-sudo apt install -y \
-    ros-humble-ament-cmake-clang-format \
-    ros-humble-ament-cmake-copyright \
-    ros-humble-ament-cmake-cppcheck \
-    ros-humble-ament-cmake-flake8 \
-    ros-humble-ament-cmake-pep257 \
-    ros-humble-ament-cmake-lint-cmake \
-    ros-humble-yaml-cpp-vendor \
-    python3-lxml \
-    python3-yaml
-```
-
-## 编译jobot_protocol_bringup及其依赖包
-
-```bash
-cd ~/ros2_ws
-source /opt/ros/humble/setup.bash
-
-# 编译ethercat驱动包
-colcon build --packages-up-to ethercat_driver
-source install/setup.bash
-
-# 编译CiA402电机驱动插件（用于步进电机控制）
-colcon build --packages-up-to ethercat_generic_cia402_drive
-source install/setup.bash
-
-# 编译协议bringup包
-colcon build --packages-up-to jobot_protocol_bringup
-source install/setup.bash
-```
-
-## 验证编译结果
-
-```bash
-# 检查是否有编译失败
-colcon list
-
-# 检查关键包是否编译成功
-colcon list | grep ethercat
-colcon list | grep jobot_protocol
 ```
 
 
@@ -277,11 +203,11 @@ colcon list | grep jobot_protocol
 
 ```bash
 # 进入资源目录
-cd src/jobot_protocol_bringup/resource/
+cd ~/ros2_ws/src/jobot_protocol_bringup/resource/
 
 # 复制依赖库到系统环境
 unzip lib_file.zip
-cd ~/lib_file
+cd lib_file
 cp -r etc/* /etc/
 cp -r bin/* /bin
 cp -r lib/* /lib/
@@ -291,6 +217,7 @@ mkdir -p /usr/local/etherlab/include/
 cp include/* /usr/local/etherlab/include/
 
 # 启动服务
+cd ..
 ./igh_driver
 ```
 
@@ -354,12 +281,54 @@ root@k1:~/ros2_ws# ethercat slave
 
 ## 启动ROS2控制节点
 
-打开终端，启动控制节点：
+**（1）安装编译依赖：**
 
 ```bash
 cd ~/ros2_ws
-source install/setup.bash
+
+# 使用rosdep安装所有依赖
+export ROS_DISTRO=humble
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+
+# 额外依赖（某些情况下rosdep可能遗漏）
+sudo apt install -y \
+    python3-lxml \
+    python3-yaml
+```
+
+**（2）编译jobot_protocol_bringup及其依赖包：**
+
+```bash
+cd ~/ros2_ws
 source /opt/ros/humble/setup.bash
+
+# 编译ethercat驱动包
+colcon build --packages-up-to ethercat_driver
+
+# 编译CiA402电机驱动插件（用于步进电机控制）
+colcon build --packages-up-to ethercat_generic_cia402_drive
+
+# 编译协议bringup包
+colcon build --packages-up-to jobot_protocol_bringup
+```
+
+**（3）验证编译结果：**
+
+```bash
+# 检查是否有编译失败
+colcon list
+
+# 检查关键包是否编译成功
+colcon list | grep ethercat
+colcon list | grep jobot_protocol
+```
+
+**（4）打开终端，启动控制节点：**
+
+```bash
+source install/setup.bash
 
 # 启动
 ros2 launch jobot_protocol_bringup motor_drive.launch.py
@@ -372,8 +341,8 @@ ros2 launch jobot_protocol_bringup motor_drive.launch.py
 ```bash
 # 在另一个终端中执行
 cd ~/ros2_ws
-source install/setup.bash
 source /opt/ros/humble/setup.bash
+source install/setup.bash
 
 # 检查ROS2节点状态
 ros2 node list
