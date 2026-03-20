@@ -49,7 +49,7 @@ Successfully installed colorzero-2.0 gpiozero-2.0.5 lgpio-0.2.2.0 pyserial-3.5 s
 
 # 2.设备引脚布局
 
-进迭时空官方参考链接：[MUSE Pi Pro 用户使用指南](https://developer.spacemit.com/documentation?token=EIk1wVY9NinD95kMsw0cFM89npd)
+进迭时空官方参考链接：[MUSE Pi Pro 用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md)
 
 Muse Pi Pro开发板引脚图如下所示：
 
@@ -217,4 +217,4 @@ Hello! Pressed
 Goodbye! Released
 ```
 
-关于 GPIO 的更多信息，请参考：https://bianbu-linux.spacemit.com/device/peripheral_driver/GPIO
+请参考[GPIO](https://www.spacemit.com/community/document/info?lang=zh&nodepath=software/SDK/buildroot/k1_buildroot/device/peripheral_driver/02-GPIO.md)了解更多。
