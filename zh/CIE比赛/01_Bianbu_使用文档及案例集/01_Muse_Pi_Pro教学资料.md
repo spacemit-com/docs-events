@@ -5,7 +5,7 @@ sidebar_position: 1
 ## 快速入门
 
 - [Muse Pi Pro开发板简介](https://developer.spacemit.com/documentation?token=KHRWwjlZziiObikHeUScjbVEnMg&type=pdf)
-- [Muse Pi Pro官方使用手册](https://developer.spacemit.com/documentation?token=EIk1wVY9NinD95kMsw0cFM89npd)
+- [Muse Pi Pro官方使用手册](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md)
 
 ## 硬件资源
 
@@ -180,7 +180,7 @@ sidebar_position: 1
 
 🌐 **官方网站**：[https://www.spacemit.com/](https://www.spacemit.com/)
 
-📚 **开发者社区**：[https://developer.spacemit.com/](https://developer.spacemit.com/)
+📚 **开发者社区**：[https://www.spacemit.com/community/](https://www.spacemit.com/community/)
 
 🛠️ **技术论坛**：[https://forum.spacemit.com/](https://forum.spacemit.com/)
 

@@ -168,7 +168,7 @@ sidebar_position: 1
 
 - [外设硬件调试](./04_外设模块参考说明.md)
 - [AI基础模块参考说明](./06_AI基础模块参考说明.md)
-- [AI综合应用案例](./07_AI综合应用案例目录.md)
+- [综合应用案例](./07_综合应用案例目录.md)
 - [应用案例课程](https://www.spacemit.com/community/course)
 
 # 参考资料
@@ -181,7 +181,7 @@ sidebar_position: 1
 
 🌐 **官方网站**：[https://www.spacemit.com/](https://www.spacemit.com/)
 
-📚 **开发者社区**：[https://developer.spacemit.com/](https://developer.spacemit.com/)
+📚 **开发者社区**：[https://www.spacemit.com/community/](https://www.spacemit.com/community/)
 
 🛠️ **技术论坛**：[https://forum.spacemit.com/](https://forum.spacemit.com/)
 
