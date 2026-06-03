@@ -1,6 +1,6 @@
 sidebar_position: 4
 
-# 竞赛教程
+# 高校竞赛教程
 
 - [Bianbu 使用文档及案例集](./01_Bianbu_使用文档及案例集/index.md)
 - [AI 大模型开发文档及案例集](./02_AI_大模型开发文档及案例集/index.md)
