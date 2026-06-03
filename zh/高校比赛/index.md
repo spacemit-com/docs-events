@@ -1,6 +1,6 @@
 sidebar_position: 4
 
-# CIE 比赛
+# 高校比赛
 
 - [Bianbu 使用文档及案例集](./01_Bianbu_使用文档及案例集/index.md)
 - [AI 大模型开发文档及案例集](./02_AI_大模型开发文档及案例集/index.md)
