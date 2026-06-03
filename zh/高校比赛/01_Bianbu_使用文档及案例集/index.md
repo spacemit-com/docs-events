@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 比赛产品包
+# Bianbu 使用文档及案例集
 
 - [1. K1 MUSE Pi Pro教学资料](01_Muse_Pi_Pro教学资料.md)
 - [2. ROS2使用说明](02_ROS2使用说明.md)
