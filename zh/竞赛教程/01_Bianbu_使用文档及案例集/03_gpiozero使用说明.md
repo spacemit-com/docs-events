@@ -9,7 +9,7 @@ sidebar_position: 3
 **（1）安装系统依赖**
 
 ```
-sudo apt update
+sudo apt update 
 sudo apt install -y libopenblas-dev \
 python3-dev \
 python3-venv \
@@ -45,13 +45,13 @@ Installing collected packages: pyserial, lgpio, setuptools, colorzero, gpiozero
 Successfully installed colorzero-2.0 gpiozero-2.0.5 lgpio-0.2.2.0 pyserial-3.5 setuptools-78.1.0
 ```
 
-注意 gpiozero 的版本必须 >= 2.0.5
+注意 gpiozero 的版本必须 ≥ 2.0.5
 
 # 2.设备引脚布局
 
 进迭时空官方参考链接：[MUSE Pi Pro 用户使用指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md)
 
-Muse Pi Pro开发板引脚图如下所示：
+Muse Pi Pro开发板引脚示意图如下所示：
 
 ![](images/muse-pi-pro-pins.png)
 
@@ -125,8 +125,7 @@ python led.py
 
 运行脚本之后，LED灯将以 1s 的间隔时间闪烁。
 
-> [!NOTE]
->
+> **注：**
 > 开发板上的GPIO的驱动能力通常较弱，因此不建议将LED等功率器件直接接在引脚上。建议您给GPIO引脚加上一个大于10千欧的上拉电阻，然后使用三极管或者MOS管控制LED等设备的通断。
 
 ### 代码解释
@@ -139,7 +138,9 @@ from gpiozero import Device
 Device.pin_factory = LGPIOFactory(chip=0) # 显式指定/dev/gpiochip0
 ```
 
-这段代码显式地指定了gpiozero库使用lgpio库作为底层的引脚工厂，lgpio是针对linux更底层的GPIO控制库，虽然gpiozero默认使用lgpio，但为了保证gpiozero在SpacemiT开发板上的正常工作，建议显示地指定引脚工厂。
+这段代码显式地指定了gpiozero库使用lgpio库作为底层的引脚工厂。
+
+lgpio是针对linux更底层的GPIO控制库，虽然gpiozero默认使用lgpio，但为了保证gpiozero在SpacemiT开发板上的正常工作，建议显示地指定引脚工厂。
 
 当您尝试移植树莓派官方例程时，建议您在其示例代码的开头加上上述三行代码，同时注意引脚编号的差异。
 
@@ -168,7 +169,7 @@ pause()
 
 通过IDE或者终端执行上述python脚本， 您应该可以看到LED灯逐渐由亮变暗然后由暗变亮。
 
-注意gpiozero输出的pwm为软件模拟pwm，在驱动舵机时会出现抖动的现象，如果需要获得与单片机一样的稳定效果，应该使用硬件pwm，硬件pwm的使用方法参考 **驱动demo章节**
+注意gpiozero输出的pwm为软件模拟pwm，在驱动舵机时会出现抖动的现象。如果需要获得与单片机一样的稳定效果，应该使用硬件pwm。硬件pwm的使用方法参考 [外设模块参考说明 4.5.2 PWM使用示例](https://www.spacemit.com/community/document/info?lang=zh&nodepath=competition/%E7%AB%9E%E8%B5%9B%E6%95%99%E7%A8%8B/01_Bianbu_%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3%E5%8F%8A%E6%A1%88%E4%BE%8B%E9%9B%86/04_%E5%A4%96%E8%AE%BE%E6%A8%A1%E5%9D%97%E5%8F%82%E8%80%83%E8%AF%B4%E6%98%8E.md)
 
 ## 3.3 读取按钮状态
 
