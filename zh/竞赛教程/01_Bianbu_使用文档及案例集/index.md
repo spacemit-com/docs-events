@@ -8,7 +8,7 @@ sidebar_position: 1
 - [2. ROS2 使用说明](02_ROS2使用说明.md)
 - [3. gpiozero 使用说明](03_gpiozero使用说明.md)
 - [4. 外设模块参考说明](04_外设模块参考说明.md)
-- [5. Model Zoo](05_Model_Zoo.md)
+- [5. SpacemiT AI SDK](05_SpacemiT AI SDK.md)
 - [6. AI基础模块参考说明](06_AI基础模块参考说明.md)
 - [7. 综合应用案例目录](07_综合应用案例目录.md)
 - [8. 案例1—AI聊天机器人](08_案例1—AI聊天机器人.md)
