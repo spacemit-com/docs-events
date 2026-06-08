@@ -1,19 +1,19 @@
 ---
 sidebar_position: 14
 ---
-
+# 案例7—基于EtherCAT控制电机
 > 本文档介绍如何基于Ethercat协议控制一体化伺服电机，以杰美康IHSS42-24-05-EC为例。
 
-# 硬件连接
+## 1. 硬件连接
 
 ![硬件连接](images/ethercat_motor.jpg)
 
 如图所示，接入电机电源，网线一端连接电机IN口，另一端插入开发板网口，电源指示灯常亮表示电机正常工作。
 
 
-# 环境设置
+## 2. 环境设置
 
-## **更新内核以启用EtherCAT**
+### 2.1 **更新内核以启用EtherCAT**
 
 ```
 # 下载内核包
@@ -64,7 +64,7 @@ root@k1:~/ros2_ws# ls -la /dev/EtherCAT0
 crw------- 1 root root 240, 0 Mar 11 17:46 /dev/EtherCAT0
 ```
 
-## 修改设备节点权限（非root用户）
+### 2.2 修改设备节点权限（非root用户）
 
 如果用普通用户运行ROS2节点，需要修改权限：
 
@@ -88,9 +88,9 @@ sudo udevadm control --reload
 sudo udevadm trigger
 ```
 
-# 依赖安装
+## 3. 依赖安装
 
-## 启用进迭时空 ROS2 储存库
+### 3.1 启用进迭时空 ROS2 储存库
 
 ```shell
 grep -q '^Suites:.*\bnoble-ros\b' /etc/apt/sources.list.d/bianbu.sources || sudo sed -i '0,/^Suites:/s//& noble-ros/' /etc/apt/sources.list.d/bianbu.sources
@@ -131,13 +131,13 @@ fi
 sudo apt update
 ```
 
-## 安装ROS2开发工具
+### 3.2 安装ROS2开发工具
 
 ```shell
 sudo apt install ros-dev-tools
 ```
 
-## ROS-Base安装
+### 3.3 ROS-Base安装
 
 包含：通信库、消息包、命令行工具。没有 GUI 工具。
 
@@ -147,7 +147,7 @@ sudo apt install ros-humble-ros-base
 
 或者选择安装 `ros-humble-desktop`，这包含了 rqt 等常见可视化工具。
 
-## 安装ROS2运行时依赖
+### 3.4 安装ROS2运行时依赖
 
 ```bash
 sudo apt install -y \
@@ -173,16 +173,16 @@ sudo apt install -y \
     ros-humble-joint-state-publisher-gui
 ```
 
-# 下载代码
+## 4. 下载代码
 
-## 创建工作区
+### 4.1 创建工作区
 
 ```bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 ```
 
-## 下载源代码包
+### 4.2 下载源代码包
 
 ```bash
 # 下载ethercat控制包
@@ -195,9 +195,9 @@ git checkout humble  # 切换到Humble分支（重要！）
 ```
 
 
-# 启动与控制
+## 5. 启动与控制
 
-## 启动ethercat master服务
+### 5.1 启动ethercat master服务
 
 **（1）启动服务**
 
@@ -279,7 +279,7 @@ root@k1:~/ros2_ws# ethercat slave
 0  0:0  PREOP  +  IHSS42-EC
 ```
 
-## 启动ROS2控制节点
+### 5.2 启动ROS2控制节点
 
 **（1）安装编译依赖：**
 
@@ -334,7 +334,7 @@ source install/setup.bash
 ros2 launch jobot_protocol_bringup motor_drive.launch.py
 ```
 
-## 控制电机
+### 5.3 控制电机
 
 打开一个新终端，发送电机控制指令：
 
@@ -422,7 +422,7 @@ ros2 topic pub -r 0.2 /trajectory_controller/joint_trajectory \
 ```
 
 
-## 读取电机位置信息
+### 5.4 读取电机位置信息
 
 打开一个新终端，实时显示关节状态：
 
