@@ -14,21 +14,14 @@ sidebar_position: 1
 
 ``` shell
 # clone 代码
-git clone https://github.com/spacemit-com/llama.cpp.git
-
-# 切换到进迭分支
-git checkout -b spacemit-dev remotes/origin/spacemit-dev
-
-# 设置toolchain环境变量，需要使用进迭时空编译器发布的编译器进行编译
-
-export RISCV_ROOT_PATH=your_toolchian_path
+git clone git@github.com:ggml-org/llama.cpp.git
 
 # 编译
-bash scripts/build-riscv64-spacemit.sh
+参考docs/build-riscv64-spacemit.md，进行工程编译
+
 ```
 
-编译过程中，会下载依赖，请耐心等待。
-编译完以后，工具和库会被安装到build-riscv64-spacemit/installed，其结构如下：
+编译完以后，工具和库会被安装到build/installed，其结构如下：
 ![](images/structure.png)
 ## 关键工具介绍 
 | 功能       | 名字           |
