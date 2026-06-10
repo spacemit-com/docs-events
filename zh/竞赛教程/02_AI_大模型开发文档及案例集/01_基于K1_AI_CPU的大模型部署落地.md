@@ -7,7 +7,7 @@ sidebar_position: 1
 
 整体架构如下图所示。
 
-![](images/block%20diagram.png)
+![](images/blockdiagram.png)
 
 ## 2. 编译使用
 
