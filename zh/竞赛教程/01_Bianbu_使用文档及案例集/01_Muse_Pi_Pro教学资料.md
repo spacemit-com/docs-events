@@ -7,7 +7,7 @@ sidebar_position: 1
 ## 1. 快速入门
 
 - [Muse Pi Pro 开发板简介](https://www.spacemit.com/community/development-kit/k1-muse-pi-pro)
-- [Muse Pi Pro 官方使用手册](https://www.spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md)
+- [Muse Pi Pro 官方使用手册](https://www.spacemit.com/community/document/info?lang=zh&nodepath=ecohardware/k1_series/k1_muse_pi_pro/pi_pro_user_guide.md)
 
 ## 2. 硬件资源
 
